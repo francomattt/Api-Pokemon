@@ -2,6 +2,7 @@ package com.example.demo.dominio;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -24,6 +25,14 @@ public class Pokemon implements Serializable {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	/*
+	 * Cuando queremos definir aspectos intrinsecos de la base de datos como por ejemplo que la columna
+	 * "nombre" no pueda repetir datos(que es elo que hace la anotacion @Column) o que no pueda ser null ect.
+	 * Para esto tenemos que crear la base de datos cuando ejecutamos el programa(para esto deberiamos utilizar la linea spring.jpa.hibernate.ddl-auto=update en el application.properties).
+	 *  Si la base de datos ya fue creada previamente esta ya tiene definida todos los detalles de sus columnas o sus tablas. La unica forma
+	 * de modifica estos aspectos es modificarla con el gestor de base de datos que utilizamos para crearla.
+	 */
+	@Column(unique = true)
 	private String nombre;
 	private String tipo;
 	
