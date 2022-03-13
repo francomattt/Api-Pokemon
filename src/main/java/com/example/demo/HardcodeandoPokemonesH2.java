@@ -14,8 +14,15 @@ public class HardcodeandoPokemonesH2 implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Pokemon p = new Pokemon("Pikachu", "electrico");
+		Pokemon p = new Pokemon("Pikachu", "Electrico");
 		pokemonDao.save(p);
+		pokemonDao.save(new Pokemon("Charmander", "Fuego"));
+		pokemonDao.save(new Pokemon("Squirtle", "Agua"));
+		pokemonDao.save(new Pokemon("Lapras", "Agua"));
+		pokemonDao.save(new Pokemon("Caterpie", "Bicho"));
+		pokemonDao.save(new Pokemon("Metapod", "Bicho"));
+		pokemonDao.save(new Pokemon("Dragonite", "Dragon"));
+		pokemonDao.save(new Pokemon("Magnemite", "Electrico"));
 		System.out.println("pokemon hardcodeado");
 		
 	}

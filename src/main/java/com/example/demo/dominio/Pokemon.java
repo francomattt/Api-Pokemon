@@ -12,7 +12,8 @@ import lombok.AllArgsConstructor;
 
 @Entity
 @AllArgsConstructor
-
+//utilizamos la anotacion table para indicarle a spring que nuestra tabla se llama pokemon (sin mayusculas), ya que si no aclarramos esto sprgin automaticamente tomara el nombre de la clase como el nombre de la tabla
+@Table(name="pokemon")
 public class Pokemon implements Serializable {
 	
 	
