@@ -67,6 +67,10 @@ public class PokemonService { //importante en en la clase service no crear una s
 		
 	}
 
+	public Pokemon actualizarPokemon(Pokemon pokemon) {
+		return pokemonDao.save(pokemon);
+	}
+
 	
 
 }

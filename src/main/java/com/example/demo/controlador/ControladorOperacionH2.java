@@ -90,6 +90,11 @@ public class ControladorOperacionH2 {
 			return "no se pudo eliminar pokemon";
 		}
 	}
+	@PutMapping("/actualizarPokemon")
+	public Pokemon actualizarPokemon(@RequestBody Pokemon pokemon) {
+		return this.pokemonService.actualizarPokemon(pokemon);
+	}
+
 
 
 }
